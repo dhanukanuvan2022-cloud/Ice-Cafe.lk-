@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Surf Home Stay Hiriketiya and ICE Café</title>
+<meta name="description" content="Beachfront homestay and ICE Café above Hiriketiya Bay, Dikwella, Sri Lanka. Breakfast with a view, 8 bedrooms, 70 m from the beach.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="top" id="top">
+  <a class="brand" href="#top">Surf Home Stay <span>Hiriketiya</span></a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menu">Menu</button>
+  <nav id="nav">
+    <a href="#stay">The stay</a>
+    <a href="#cafe">ICE Café</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#find">Find us</a>
+    <a class="btn small" href="tel:+94702528927">Call us</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-text">
+    <p class="kicker">Hiriketiya Bay, Dikwella, Sri Lanka</p>
+    <h1>Wake up above the bay.</h1>
+    <p class="lead">A beachfront homestay with its own café on the rocks. Surf in the morning, eat breakfast with the waves in front of you, and walk 70 metres to Hiriketiya Beach.</p>
+    <div class="actions">
+      <a class="btn" href="#find">Plan your stay</a>
+      <a class="btn ghost" href="#cafe">See the café menu</a>
+    </div>
+  </div>
+  <div class="hero-photos" aria-hidden="false">
+    <img class="p1" src="images/dusk-lights.jpg" alt="Café tables under string lights at dusk, with the bay behind">
+    <img class="p2" src="images/sunset-smoothies.jpg" alt="Two fruit smoothies on a wooden table at sunset">
+  </div>
+</section>
+
+<section class="stay" id="stay">
+  <div class="wrap two">
+    <div>
+      <h2>A quiet corner of a surf town</h2>
+      <p>Hiriketiya is a small horseshoe bay on Sri Lanka’s south coast, known for easy waves and a relaxed crowd. Surf Home Stay sits right on it, a calmer spot than the busy main beach, with a view of the surfers from your breakfast table.</p>
+      <p>Stay in one of 8 bedrooms, have the big Sri Lankan breakfast, then spend the day on the sand. In the evening the café lights come on and dinner is served beside the water.</p>
+    </div>
+    <dl class="facts">
+      <div><dt>Rooms</dt><dd>8 bedrooms</dd></div>
+      <div><dt>To the beach</dt><dd>About 70 metres</dd></div>
+      <div><dt>Rates</dt><dd>From about US$25 a night, depending on season</dd></div>
+      <div><dt>Check-in and out</dt><dd>12:00 PM in, 10:00 AM out</dd></div>
+      <div><dt>Included</dt><dd>Free Wi‑Fi and free parking</dd></div>
+      <div><dt>On site</dt><dd>Restaurant, bar and ICE Café</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="cafe" id="cafe">
+  <div class="wrap">
+    <h2>ICE Café</h2>
+    <p class="sub">Coffee, breakfast and light meals on the rocks above the bay. Open every day, 7:00 AM to 7:00 PM.</p>
+    <div class="tabs" role="tablist" aria-label="Menu categories"></div>
+    <div class="menu-grid" id="menu"></div>
+    <p class="note">Dishes change with the season. Ask the team for today’s menu and prices.</p>
+  </div>
+</section>
+
+<section class="gallery-sec" id="gallery">
+  <div class="wrap">
+    <h2>Around the café</h2>
+    <div class="gallery" id="gallery-grid"></div>
+  </div>
+</section>
+
+<section class="find" id="find">
+  <div class="wrap two">
+    <div>
+      <h2>Find us</h2>
+      <address>
+        Surf Home Stay Hiriketiya and ICE Café<br>
+        Hiriketiya Beach Road, Nilwella<br>
+        Dikwella, Southern Province, Sri Lanka
+      </address>
+      <p><a class="link" href="tel:+94702528927">+94 70 252 8927</a></p>
+      <p><a class="link" href="https://maps.app.goo.gl/AAZgjUKXbHxL9USF8" target="_blank" rel="noopener">Open in Google Maps</a></p>
+
+      <form id="enquiry" class="enquiry">
+        <h3>Send an enquiry</h3>
+        <label>Your name <input name="name" required autocomplete="name"></label>
+        <div class="row">
+          <label>Check-in <input type="date" name="in"></label>
+          <label>Check-out <input type="date" name="out"></label>
+        </div>
+        <label>Guests <input type="number" name="guests" min="1" max="30" value="2"></label>
+        <label>Message <textarea name="msg" rows="3" placeholder="Room type, questions, anything else"></textarea></label>
+        <button class="btn" type="submit">Send on WhatsApp</button>
+        <p class="note" id="form-note" role="status"></p>
+      </form>
+    </div>
+    <div class="map">
+      <iframe title="Map of Surf Home Stay Hiriketiya" loading="lazy" src="https://www.google.com/maps?q=5.9611375,80.7099844&z=16&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>Surf Home Stay Hiriketiya and ICE Café. Hiriketiya, Dikwella, Sri Lanka.</p>
+  <p><a href="#top">Back to top</a></p>
+</footer>
+
+<dialog id="lightbox" aria-label="Photo viewer">
+  <button class="lb-close" aria-label="Close">Close</button>
+  <button class="lb-nav prev" aria-label="Previous photo">Prev</button>
+  <img alt="">
+  <button class="lb-nav next" aria-label="Next photo">Next</button>
+</dialog>
+
+<script src="js/main.js"></script>
+</body>
+</html>

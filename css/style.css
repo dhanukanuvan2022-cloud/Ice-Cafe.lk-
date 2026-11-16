@@ -1,0 +1,105 @@
+:root{
+  --night:#0d2f3b; --lagoon:#1f7f8e; --foam:#f3f7f6; --yellow:#e8b630; --palm:#2d5a3d; --ink:#12252c; --mute:#55696f;
+  --head:'Bricolage Grotesque','Trebuchet MS',system-ui,sans-serif;
+  --body:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--foam);line-height:1.6;font-size:1.05rem}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+h1,h2,h3{font-family:var(--head);line-height:1.08;margin:0 0 .6em;letter-spacing:-.01em}
+h1{font-size:clamp(2.6rem,6.5vw,5rem);font-weight:800}
+h2{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:700}
+h3{font-size:1.25rem}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+.two{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:start}
+
+/* header */
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:.8rem 1.25rem;background:var(--night);color:#fff}
+.brand{font-family:var(--head);font-weight:800;font-size:1.15rem;text-decoration:none}
+.brand span{font-weight:500;color:var(--yellow)}
+nav{display:flex;align-items:center;gap:1.4rem}
+nav a{text-decoration:none;font-weight:500}
+nav a:not(.btn):hover{color:var(--yellow)}
+.nav-toggle{display:none;background:none;border:1px solid #fff6;color:#fff;border-radius:6px;padding:.4rem .8rem;font:inherit}
+
+/* buttons */
+.btn{display:inline-block;background:var(--yellow);color:var(--night);font-weight:600;text-decoration:none;border:2px solid var(--yellow);padding:.75rem 1.4rem;border-radius:999px;cursor:pointer;font-family:var(--body);font-size:1rem;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.small{padding:.4rem 1rem}
+.btn.ghost{background:transparent;color:#fff;border-color:#fff8}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:2rem;align-items:center;min-height:calc(100vh - 56px);padding:3rem max(1.25rem,calc((100% - 1100px)/2));background:var(--night);color:#fff;overflow:hidden}
+.kicker{color:var(--yellow);font-weight:600;margin:0 0 1rem}
+.lead{max-width:34rem;font-size:1.2rem;color:#d6e6e8;margin:0 0 2rem}
+.actions{display:flex;flex-wrap:wrap;gap:.8rem}
+.hero-photos{position:relative;height:520px}
+.hero-photos img{position:absolute;border-radius:14px;object-fit:cover;box-shadow:0 18px 40px #0007;border:6px solid var(--foam)}
+.p1{width:62%;height:370px;left:0;top:0;transform:rotate(-3deg);animation:land .9s ease-out both}
+.p2{width:54%;height:380px;right:0;bottom:0;transform:rotate(4deg);animation:land .9s .25s ease-out both}
+@keyframes land{from{opacity:0;transform:translateY(40px) rotate(0)}}
+
+/* stay */
+.stay,.find,.gallery-sec{padding:5rem 0}
+.stay p,.sub{max-width:34rem;color:var(--mute)}
+.facts{margin:0;border-top:3px solid var(--lagoon)}
+.facts div{display:flex;justify-content:space-between;gap:1rem;padding:.9rem 0;border-bottom:1px solid #12252c22}
+.facts dt{font-weight:600;color:var(--lagoon);flex:0 0 9rem}
+.facts dd{margin:0;text-align:right}
+
+/* cafe */
+.cafe{background:var(--palm);color:#fff;padding:5rem 0}
+.cafe .sub{color:#d3e4d8}
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.8rem 0}
+.tabs button{font:inherit;font-weight:600;background:transparent;color:#fff;border:2px solid #fff6;border-radius:999px;padding:.45rem 1.2rem;cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--yellow);border-color:var(--yellow);color:var(--night)}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.2rem}
+.dish{background:var(--foam);color:var(--ink);border-radius:12px;overflow:hidden}
+.dish img{width:100%;height:210px;object-fit:cover}
+.dish div{padding:1rem 1.1rem 1.2rem}
+.dish h3{margin:0 0 .3rem}
+.dish p{margin:0;font-size:.95rem;color:var(--mute)}
+.note{font-size:.92rem;color:#d3e4d8;margin-top:1.5rem}
+
+/* gallery */
+.gallery{columns:3 220px;column-gap:1rem}
+.gallery button{display:block;width:100%;margin:0 0 1rem;padding:0;border:0;border-radius:10px;overflow:hidden;cursor:zoom-in;background:none;break-inside:avoid}
+.gallery img{width:100%;transition:transform .3s}
+.gallery button:hover img{transform:scale(1.04)}
+dialog{border:0;padding:0;background:transparent;max-width:92vw;max-height:92vh;overflow:visible}
+dialog::backdrop{background:#000d}
+dialog img{max-height:84vh;border-radius:8px;margin:auto}
+.lb-close,.lb-nav{position:absolute;background:var(--yellow);color:var(--night);border:0;border-radius:999px;padding:.5rem 1rem;font:600 1rem var(--body);cursor:pointer}
+.lb-close{top:-3rem;right:0}
+.lb-nav{top:50%}.prev{left:-1rem}.next{right:-1rem}
+
+/* find */
+.find{background:#e4eeee}
+address{font-style:normal;margin-bottom:1rem}
+.link{font-weight:600;color:var(--lagoon)}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;border-radius:14px}
+.enquiry{margin-top:2rem;padding:1.4rem;background:#fff;border-radius:14px;border-left:6px solid var(--yellow)}
+.enquiry label{display:block;font-weight:600;font-size:.92rem;margin-bottom:.8rem}
+.enquiry input,.enquiry textarea{width:100%;margin-top:.25rem;padding:.6rem .7rem;font:inherit;border:1px solid #12252c44;border-radius:8px;background:var(--foam)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.enquiry .note{color:var(--mute);margin:.8rem 0 0}
+footer{background:var(--night);color:#cfe0e3;padding:2rem 1.25rem;text-align:center}
+footer p{margin:.2rem 0}
+
+@media (max-width:820px){
+  .two,.hero{grid-template-columns:1fr}
+  .hero{min-height:auto;padding-top:2.5rem}
+  .hero-photos{height:430px}
+  .nav-toggle{display:block}
+  nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;background:var(--night);padding:1rem 1.25rem 1.4rem}
+  nav.open{display:flex}
+  .facts dd{text-align:left}
+  .facts div{flex-direction:column;gap:.1rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+}
